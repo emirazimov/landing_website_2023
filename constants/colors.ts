@@ -1,0 +1,15 @@
+export default {
+    black: '#000',
+    white: '#fff',
+    blue: '#23236F',
+    green: '#50D890',
+    red: '#E82447',
+    darkBlue: '#121248',
+    gray: '#5B6267',
+    lightGray: '#E8EAF1',
+    grayPlaceholder: '#CED3D7',
+    ivoryMobile: '#F1F3FB',
+    ivoryWeb: '#F6F7FC',
+    grayInactiveMobile: '#505961',
+    grayInactiveWeb: '#9CA4A9',
+}

@@ -1,0 +1,91 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  line-height: 1.6;
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+html * {
+  box-sizing: border-box;
+  scroll-behavior: smooth !important;
+}
+
+/* Calendar hidden workaround */
+.react-datepicker-popper {
+  position: fixed !important;
+  z-index: 1000000 !important;
+}
+
+/* Carousel slide shadow */
+.slider-frame {
+  overflow: visible !important;
+  user-select: auto !important;
+}
+
+.slide {
+  opacity: 0 !important;
+}
+
+.slide-visible {
+  opacity: 1 !important;
+}
+
+
+/* Hide tabs more option */
+.rc-tabs-nav-more {
+  display: none;
+}
+
+/* Modal on close flickering workaround */
+.react-responsive-modal-overlay,
+.react-responsive-modal-container,
+.react-responsive-modal-modal {
+  animation-fill-mode: forwards !important;
+}
+
+.react-responsive-modal-modal {
+  border-radius: 20px;
+}
+
+.react-responsive-modal-overlay {
+    background: rgba(0, 0, 0, 0.2) !important;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 1170px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+@media (max-width: 1120px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 96%;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    width: 100%;
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+}
+

@@ -1,0 +1,35 @@
+# Do not change version. This is the version of aws buildspec, not the version of your buldspec file.
+version: 0.2
+phases:
+  install:
+    commands:
+      # - echo Installing Node 12...
+      # - curl -sL https://deb.nodesource.com/setup_14.x | bash -
+      # - apt install -y nodejs
+  pre_build:
+    commands:
+      #installs dependencies into the node_modules/ directory
+      - npm install
+      - touch .env
+      - echo $ENV > .env
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Compiling
+      - npm run export
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - ls
+      - cp -r deploy/* .
+      - ls
+# Include only the files required for your application to run.
+artifacts:
+  files:
+    - out/**/*
+    - package.json
+    - docker/**/*
+    - appspec.yml
+    - scripts/**/*
+  #discard-paths: no
+  #base-directory: build
